@@ -18,13 +18,13 @@ import { db } from "~/server/db";
 export default async function HomePage() {
   const images = await db.query.images.findMany();
   return (
-    <main className="">
+    <main className="bg-orange-200">
       <div className="flex flex-wrap gap-4">
         {images.map((image) => (
-          <div key={image.id} className="w-48 text-orange-600">
+          <div key={image.id} className="w-48 text-orange-700 text-xl">
             <img src={image.url} />
             <div>{image.name}</div>
-            <div>{image.createdAt.toString()}</div>
+            <div className="text-sm text-orange-450">{image.createdAt.toString()}</div>
 
       </div>
       ))}
