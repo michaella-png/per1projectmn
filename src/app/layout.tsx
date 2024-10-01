@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
        <body className={`${GeistSans.variable}`}>
        <div className="w-full text-9xl text-orange-500 text-center">First Layout</div>
-       <button className="btn btn-outline bg-pink-200 text-rose-400">Boop</button>
+       <button className="btn btn-outline bg-pink-200 text-rose-400 cursor-not-allowed">Boop</button>
 
        <div className="card bg-yellow-100 w-80 shadow-xl ">
           <figure>
@@ -28,7 +28,7 @@ export default function RootLayout({
             <h2 className="card-title text-orange-400">Mango Sticky Rice!</h2>
             <p className="text-yellow-500">Get me this rn. </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-default  bg-yellow-200 text-orange-400">Order Now</button>
+              <button className="btn btn-default  bg-yellow-200 text-orange-400 border-orange-400">Order Now</button>
             </div>
           </div>
         </div>

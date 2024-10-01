@@ -21,7 +21,7 @@ export default async function HomePage() {
     <main className="bg-orange-200">
       <div className="flex flex-wrap gap-4">
         {images.map((image) => (
-          <div key={image.id} className="w-48 text-orange-700 text-xl">
+          <div key={image.id} className="w-48 text-orange-700 text-xl rounded-xl border-8 shadow-lg cursor-grab">
             <img src={image.url} />
             <div>{image.name}</div>
             <div className="text-sm text-orange-450">{image.createdAt.toString()}</div>
