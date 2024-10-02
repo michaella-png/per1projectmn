@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
        <body className={`${GeistSans.variable}`}>
        <div className="w-full text-9xl text-orange-500 text-center">First Layout</div>
-       <button className="btn btn-outline bg-pink-200 text-rose-400 cursor-not-allowed">Boop</button>
+       <button className="btn btn-outline bg-pink-200 text-rose-400 cursor-not-allowed animate-bounce">Boop</button>
 
        <div className="card bg-yellow-100 w-80 shadow-xl ">
           <figure>
