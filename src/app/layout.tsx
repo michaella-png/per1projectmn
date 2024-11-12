@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body className="font-mono text-yellow-500">
           <SignedOut>
             <SignInButton />
           </SignedOut>
@@ -37,7 +37,7 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
     
     /*<html lang="en">
