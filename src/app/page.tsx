@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { db } from "~/server/db";
+import { getMyImages} from "~/server/queries"
 
 /*const mockUrls = [
   "https://utfs.io/f/182c8988-2780-4ff3-b3d8-9b73bc91b801-1ody.jpg",
@@ -16,11 +17,14 @@ import { db } from "~/server/db";
   }));*/
 
 export default async function HomePage() {
-  const images = await db.query.images.findMany();
+  const images = await getMyImages().catch((error) => {
+    console.error(error);
+    return null;
+  });
   return (
     <main className="bg-orange-200">
       <div className="flex flex-wrap gap-4">
-        {images.map((image) => (
+        {images != null && images.map((image, index) => (
           <div key={image.id} className="w-48 text-orange-700 text-xl rounded-xl border-8 shadow-lg cursor-grab">
             <img src={image.url} />
             <div>{image.name}</div>
